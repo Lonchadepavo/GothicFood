@@ -1,0 +1,39 @@
+#Lista de comidas a las que puedes ser alérgico
+comidas:
+   - APPLE
+   - BREAD
+   - POTATO
+   - BAKED_POTATO
+   - COOKED_BEEF
+   - COOKED_CHICKEN
+   - COOKED_FISH
+   - COOKED_MUTTON
+   - COOKED_PORKCHOP
+   - COOKED_RABBIT
+   - COOKIE
+   - CARROT
+   - MUSHROOM_STEW
+   - PUMPKIN_PIE
+   - RABBIT_STEW
+   - BEETROOT_SOUP
+   - BEETROOT
+   - CHICKEN
+   - BEEF
+   - FISH
+   - RABBIT
+   - MUTTON
+   - PORKCHOP
+   - MELON
+   - CAKE
+
+#Número máximo de alergias que puede tener un jugador aleatoriamente al entrar al servidor por primera vez
+max_alergias: 3
+
+#Porcentaje de probabilidad de tener más o menos alergias (50% no tener ninguna, 30% tener una, 15% tener 2, 5% tener 3)
+#Añadir porcentajes si se aumenta el total de alergias, sino por defecto tendrán un 0% de probabilidad de tenerlas
+probabilidad_alergias:
+   - 10
+   - 30
+   - 50
+   - 105
+   
