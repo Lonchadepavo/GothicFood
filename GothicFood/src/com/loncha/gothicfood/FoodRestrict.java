@@ -42,7 +42,6 @@ public class FoodRestrict implements Listener {
 		
 		//Comprueba si el archivo de datos del player existe, si no existe lo crea y rellena el hashmap con datos default.
 		if (!dataFoodFile.exists()) {
-			System.out.println("No existe");
 			Files.copy(originalDataFile.toPath(), dataFoodFile.toPath());
 			
 			//Crea un array temporal para guardar datos placeholder en el hashmap
@@ -55,7 +54,6 @@ public class FoodRestrict implements Listener {
 			
 		} else {
 			//Carga los datos existentes en el hashmap
-			System.out.println("Existe");
 			loadData(datosComida, p);
 		}
 		

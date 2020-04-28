@@ -3,7 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="Recursos"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="D:/Minecraft/Spigot 1.12.2/craftbukkit-1.12.2.jar"/>
-	<classpathentry kind="lib" path="D:/Minecraft/Spigot 1.12.2/spigot-1.12.2.jar"/>
+	<classpathentry kind="lib" path="spigot-1.12.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
