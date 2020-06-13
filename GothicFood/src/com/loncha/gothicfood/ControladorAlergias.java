@@ -21,23 +21,31 @@ import java.util.HashMap;
 import java.util.List;
 
 public class ControladorAlergias implements Listener {
+	//Referencias
 	Main plugin;
 	FileConfiguration playerYaml;
 	FoodRestrict fd;
 	
+	//Máximo de alergias por jugador
 	int intMaxAlergias;
+	
+	//Probabilidades
 	Integer[] probabilidadAlergias;
 	Integer[] probabilidadNivelAlergias;
+	
+	//Tipos de alergias y mensajes de cada una
 	String[] arrNiveles = new String[] {"LEVE", "GRAVE", "MORTAL"};
 	String[] mensajesAlergias = new String[] {ChatColor.RED+"Lo que acabas de comer te ha sentado un poco mal...", ChatColor.RED+"Te entran fuertes mareos y dolores después de comer eso", ChatColor.DARK_RED + "Casi no lo cuentas, nunca más vuelvas a probar esa comida"};
 	
 	static String[] listaComidas;
 	
+	//Constructor que coge el main como parámetro
 	ControladorAlergias(Main p) {
 		plugin = p;
 		cargarDatosAlergias();
 	}
 	
+	//Método encargado de establecer las alergias a un jugador
 	public void setAlergias(FoodRestrict fd, Player p) throws FileNotFoundException, IOException, InvalidConfigurationException {
 		this.fd = fd;
 		String[] arrAlergias;
@@ -98,6 +106,7 @@ public class ControladorAlergias implements Listener {
 		}
 	}
 	
+	//Método encargado de comprobar las alergias de un jugador (para ver si tienes que ponerle efectos o no)
 	public void checkAlergias(String comida, Player p) {
 		String[] tempAlergias, tempNivelAlergias;
 		tempAlergias = fd.datosComida.get(p)[5].split(" ");
@@ -153,6 +162,7 @@ public class ControladorAlergias implements Listener {
 		return this.playerYaml;
 	}
 	
+	//Cargar datos de las alergias desde el archivo de configuración.
 	public void cargarDatosAlergias() {
 		//Cargamos la lista de comidas a las que puedes ser alérgico
 		List<String> tempComidas = plugin.getConfig().getStringList("comidas");
